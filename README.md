@@ -119,7 +119,10 @@ Finally, for validating some enhancement ideas, I added *animeBb* class in our *
 **Fig. 2 UFO Finder homepage (uppercase filters)**
 
 ### Deliverable 2
-We factored in several possible improvements and incorporated best practices in our completed webpage as discussed in the previous section. Fig. 1 and 2 illustrated two cases when users keyed in three case-insensitive keywords at the same time (*date*, *state*, and *shape*) for narrowing down certain datetime and state when/where the UFO sightings took place, and specific shape of the UFO objects at the time of sighting. The filtering keywords that we simulated were date = **1/1/2010**, state = **ca**, and shape = **triangle** (Fig. 1) and date = **1/1/2010**, state = **CA**, and shape = **Triangle** assuming that our users typed in a mixture of lowercase and uppercase keywords (Fig. 2).
+We factored in several possible improvements and incorporated best practices in our completed webpage as discussed in the previous section. Fig. 1 and 2 illustrated two cases when users keyed in three case-insensitive keywords at the same time (*date*, *state*, and *shape*) for narrowing down certain datetime and state when/where the UFO sightings took place, and specific shape of the UFO objects at the time of sighting. The filtering keywords that we have simulated were:
+
+1. date = **1/1/2010**, state = **ca**, and shape = **triangle** (Fig. 1), and
+2. date = **1/1/2010**, state = **CA**, and shape = **Triangle** assuming that our users typed in a mixture of lowercase and uppercase keywords before pressing the \<Enter\> or \<Tab\> key (Fig. 2).
 
 Brief animation effects will play briefly when users visit or reload our <a href="https://ats-tandjoeng7.github.io/UFOs/" target="_blank">UFO Finder webpage</a>.
 
