@@ -8,17 +8,21 @@ This project focused on the application of web designing software, such as HTML,
   - [GitHub Repo Branches](#github-repo-branches)
 - [Web Designing and Analysis Results](#web-designing-and-analysis-results)
   - [Deliverable 1](#deliverable-1)
+    - [Customized JavaScript Functions](#customized-javascript-functions)
+    - [Customized CSS Styles](#customized-css-styles)
   - [Deliverable 2](#deliverable-2)
+    - [Drawback](#drawback)
+    - [Recommendations](#recommendations)
 - [Summary](#summary)
 - [References](#references)
 
 ## Overview of Project
-This project and Module 12 assignment focused on cultivating knowledge and skills of web designing and data analysis through some rigorous exercises for further understanding the concepts of integrating HyperText Markup Language (HTML), Cascading Style Sheet (CSS), and JavaScript programs for building a dynamic and interactive webpage with optimized content, functionality, usability, and user experience. We then applied our knowledge and core skills to perform in-depth analysis of UFO (Unidentified Foreign Object) sighting databases by allowing users to easily filter a list of data by multiple criteria at the same time.
+This project and Module 12 assignment focused on cultivating knowledge and skills of web designing and data analysis through some rigorous exercises for further understanding the concepts of integrating HyperText Markup Language (HTML), Cascading Style Sheet (CSS), and JavaScript programs for building a dynamic and interactive webpage with optimized content, functionality, usability, and user experience. We then applied our knowledge and core skills to deploy our webpage and perform in-depth analysis of UFO (Unidentified Flying Object) sighting databases by allowing users to easily filter a list of data by multiple criteria at the same time.
 
 ### Resources
 - Source code: app.js, data.js, style.css, index.html
 - Image file: jpg/png files
-- Software: [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS: Cascading Style Sheet](https://developer.mozilla.org/en-US/docs/Web/CSS), [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference), [Chrome DevTools](https://developer.chrome.com/docs/devtools/overview/), [Data-Driven Documents (D3)](https://d3js.org/).
+- Software: [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS: Cascading Style Sheet](https://developer.mozilla.org/en-US/docs/Web/CSS), [JavaScript reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference), [Chrome DevTools](https://developer.chrome.com/docs/devtools/overview/), [Data-Driven Documents (D3)](https://d3js.org/), [GitHub](https://github.com/).
 
 ### Challenge Overview
 Outline of our deliverables and a written report for presenting our results and analysis summary:
@@ -49,14 +53,15 @@ main branch
 By using several web designing tools, such as HTML, CSS, JavaScript, and Chrome DevTools, we were able to explore UFO sighting databases and extract data for building an interactive webpage, which enhanced user-friendly filtering functionality, good usability, and user experience. We also conducted some in-depth observations of our completed webpage and further research that enabled us to incorporate some best practices when designing a website. I have also adopted some recent techniques and improved approaches that better served our analysis and visualization purposes.
 
 ### Deliverable 1
-The refactored source codes and a screenshot of our webpage can be referred in [UFO Finder webpage](./index.html), [app.js](./static/js/app.js), and Fig. 1-2. We applied customized CSS styles by directly linked to [style.css](./static/css/style.css) in addition to `<script src="https://d3js.org/d3.v7.min.js"></script>` for enabling several useful features, better user experience, and dynamic event listeners:
+The refactored source code and screenshots of our webpage can be referred in [UFO Finder webpage](./index.html), [app.js](./static/js/app.js), Fig. 1, and Fig. 2. We applied customized CSS styles by directly linked to [style.css](./static/css/style.css) in addition to `<script src="https://d3js.org/d3.v7.min.js"></script>` for enabling several useful features, better user experience, and dynamic event listeners, for instance:
 
-- User-friendly filtering feature. The improved feature allowed case-insensitive inputs from users because people would capitalize State and Country names, and type in without knowing the restrictions in most cases.
-- User experience was enhanced by adding a definite expanding-contracting animation of the galaxy image background and `<h1>` tag.
-- Title was added to display "Refresh this page" when users hover their mouse over the navigation bar, though adding a title is no longer a requirement in recent web browsers. This could be useful when users use a shortcut key `F11` to view our webpage in full screen mode.
-- XHTML compatibility is preserved just in case.
+- User-friendly filtering feature. The improved feature allowed case-insensitive inputs from users because people would naturally capitalize State and Country names, and type in without knowing the restrictions in most cases.
+- User experience was enhanced by adding a short expanding-contracting animation of the galaxy image background and \<h1\> tag.
+- Title attribute was added to display "Refresh this page" when users hover their mouse over the link on the navigation bar, though adding a title attribute is no longer a requirement in recent web browsers. This could be useful when users use the keyboard \<F11\> key to view our webpage in full screen mode.
+- XHTML/XML compatibility is somehow preserved just in case.
 
-The `updateFilters()` function in our ***app.js*** file included a few lines that might be unique as below. Considering the `console.log(htmlDOM)` output, `d3.select(this)` in JavaScript captured the current HTML Document Object Model (DOM) element and hence we could later loop through this element for isolating any child elements in our webpage. Instead of `if-else loop`, I simplified it to a single `if loop` with a logical not condition to accomplish the same thing. In the `filterTable()` function, I used `Object.entries()` and `forEach()` functions to loop through id-value pairs of the nonempty filter object entered by users.
+#### Customized JavaScript Functions
+The `updateFilters()` function in our ***app.js*** file included a few lines that might be unique as below. Considering the `console.log(htmlDOM)` output, `d3.select(this)` in JavaScript captured the current HTML Document Object Model (DOM) element and hence we could later loop through this element for isolating any subelements in our webpage. Instead of `if-else loop`, I applied a single `if loop` with a logical not condition to accomplish the same thing. When the filter values were empty, "", or undefined, the corresponding filter entries would be deleted. In the `filterTable()` function, since `filters` was defined as an object, I could then use `Object.entries()` and `forEach()` functions to loop through id-value pairs of the nonempty filter object according to users' inputs.
 
 ```
 // 3. Use this function to update the filters.
@@ -84,7 +89,8 @@ function updateFilters() {
 }
 ```
 
-Finally, for validating some improvement proposals, I added *animeBb* class in our ***style.css*** file as follows, which should provide better users' impression when visiting our UFO Finder webpage.
+#### Customized CSS Styles
+Finally, for validating some enhancement ideas, I added *animeBb* class in our ***style.css*** file as follows, which should provide better users' impression when visiting our [UFO Finder webpage](https://ats-tandjoeng7.github.io/UFOs/).
 
 ```
 .animeBb {
@@ -113,15 +119,19 @@ Finally, for validating some improvement proposals, I added *animeBb* class in o
 **Fig. 2 UFO Finder homepage (uppercase filters)**
 
 ### Deliverable 2
-We have factored in some possible improvements and incorporated some best practices in our completed webpage as discussed in the previous section. Fig. 1 and 2 illustrated examples when users keyed in three case-insensitive keywords at the same time (*date*, *state*, and *shape*) for narrowing down certain datetime and state when/where the UFO sightings took place, and specific shape of the UFO objects at the time of sighting. The animation effects can be enjoyed by visiting our <a href="./index.html" target="_blank">UFO Finder webpage</a>.
+We factored in several possible improvements and incorporated best practices in our completed webpage as discussed in the previous section. Fig. 1 and 2 illustrated two cases when users keyed in three case-insensitive keywords at the same time (*date*, *state*, and *shape*) for narrowing down certain datetime and state when/where the UFO sightings took place, and specific shape of the UFO objects at the time of sighting. Brief animation effects will play briefly when users visit or reload our <a href="https://ats-tandjoeng7.github.io/UFOs/" target="_blank">UFO Finder webpage</a>.
 
+#### Drawback
+One drawback of our current webpage was the filtering features require a lot of typing, which could certainly trigger mistyping. Users may feel frustrated if their filtering keywords keep returning nothing. Auto-completion features and drop-down menus (e.g. country selection) might be one way to help users mitigate these hassles.
+
+#### Recommendations
 To improve our webpage beyond the four bullet points that have been detailed in [Deliverable 1](#deliverable-1), here are two recommendations that I would like to suggest.
 
-1. Add correction features for properly displaying special characters and escape characters under the **Comments** header. JavaScript `RegExp()` and `match()` methods might be some of the options that could be effective for fixing the displaying limitations.
-2. Add correction features for capitalizing the first letter of City names and both letters of State and Country names after users run their filtering preferences. JavaScript `charAt()` and `substring()` methods might be helpful to accomplish these tricks.
+1. Adding correction features for properly displaying special characters and escape characters under the **Comments** header. JavaScript `RegExp()` and `match()` methods might be the options for fixing such displaying limitations. Similarly, adding correction features for capitalizing the first letter of City names and both letters of State and Country names after users run their filtering preferences might also improve user experience. JavaScript `charAt()` and `substring()` methods might be helpful to accomplish these tricks.
+2. Clickable visual maps for filtering certain locations where UFO sightings took place, which let users visually spot the UFO sighting locations and filter certain location and information just by clicking or hovering over a location that users want to analyze.
 
 ## Summary
-All deliverables have been completed and summarized according to Module 12 assignment requirements, including some extra analyses, deployment and validation of some improvement features, testruns, and in-depth analysis results. I hope users will be able to experience the user-friendly features when using our <a href="./index.html" target="_blank">UFO Finder webpage</a> and leave with good impression.
+All deliverables have been completed and summarized according to Module 12 assignment requirements, including some extra analyses, deployment and validation of some improvement features, testruns, and in-depth analysis results. I hope users will be able to experience the user-friendly features when using our <a href="https://ats-tandjoeng7.github.io/UFOs/" target="_blank">UFO Finder webpage</a> and leave the webpage with good impression.
 
 ## References
 [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)\
@@ -130,5 +140,5 @@ All deliverables have been completed and summarized according to Module 12 assig
 [Chrome DevTools](https://developer.chrome.com/docs/devtools/overview/)\
 [Data-Driven Documents (D3)](https://d3js.org/)\
 [d3-drag](https://github.com/d3/d3-drag/blob/main/README.md#drag_on)\
-[Closing HTML `<input>` tag issue - Stack Overflow](https://stackoverflow.com/questions/13232121/closing-html-input-tag-issue)\
+[Closing HTML \<input\> tag issue - Stack Overflow](https://stackoverflow.com/questions/13232121/closing-html-input-tag-issue)\
 [JavaScript titleCase function without regex](https://stackoverflow.com/questions/33766968/javascript-titlecase-function-without-regex)
