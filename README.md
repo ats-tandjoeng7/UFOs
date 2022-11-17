@@ -31,7 +31,7 @@ Outline of our deliverables and a written report for presenting our results and 
 - ☑️ Deliverable 2: A written report on the UFO analysis (this ["README.md"](./README.md)).
 
 ### GitHub Repo Branches
-All deliverables in Module 12 challenge are committed in this GitHub repo as outlined below. Two extra files, index_dt.html and app_dt.js, that allow filtering for *date* only were also uploaded for references.  
+All deliverables in Module 12 challenge are committed in this GitHub repo as outlined below. Two extra files (index_dt.html and app_dt.js) that allow filtering for *date* only were also uploaded for references.  
 
 main branch  
 |&rarr; [./README.md](./README.md)  
@@ -61,7 +61,7 @@ The refactored source code and screenshots of our webpage can be referred in [UF
 - XHTML/XML compatibility is somehow preserved just in case.
 
 #### Customized JavaScript Functions
-The `updateFilters()` function in our ***app.js*** file included a few lines that might be unique as below. Considering the `console.log(htmlDOM)` output, `d3.select(this)` in JavaScript captured the current HTML Document Object Model (DOM) element and hence we could later loop through this element for isolating any subelements in our webpage. Instead of `if-else loop`, I applied a single `if loop` with a logical not condition to accomplish the same thing. When the filter values were empty, "", or undefined, the corresponding filter entries would be deleted. In the `filterTable()` function, since `filters` was defined as an object, I could then use `Object.entries()` and `forEach()` functions to loop through id-value pairs of the nonempty filter object according to users' inputs.
+The `updateFilters()` function in our ***app.js*** file included a few lines that might be unique as below. Considering the `console.log(htmlDOM)` output, `d3.select(this)` in JavaScript captured the current HTML Document Object Model (DOM) element and hence we could later loop through this element for isolating any child elements in our webpage. Instead of `if-else loop`, I applied a single `if loop` with a logical not condition to accomplish the same thing. When the filter values were empty, "", or undefined, the corresponding filter entries would be deleted. In the `filterTable()` function, since `filters` was defined as an object, I could then use `Object.entries()` and `forEach()` functions to loop through id-value pairs of the nonempty filter object according to users' inputs.
 
 ```
 // 3. Use this function to update the filters.
@@ -119,7 +119,7 @@ Finally, for validating some enhancement ideas, I added *animeBb* class in our *
 **Fig. 2 UFO Finder homepage (uppercase filters)**
 
 ### Deliverable 2
-We factored in several possible improvements and incorporated best practices in our completed webpage as discussed in the previous section. Fig. 1 and 2 illustrated two cases when users keyed in three case-insensitive keywords at the same time (*date*, *state*, and *shape*) for narrowing down certain datetime and state when/where the UFO sightings took place, and specific shape of the UFO objects at the time of sighting. The filtering keywords that we simulated were: date = **1/1/2010**, state = **ca**, and shape = **triangle** (Fig. 1) and date = **1/1/2010**, state = **CA**, and shape = **Triangle** assuming that our users typed in a mixture of lowercase and uppercase keywords (Fig. 2).
+We factored in several possible improvements and incorporated best practices in our completed webpage as discussed in the previous section. Fig. 1 and 2 illustrated two cases when users keyed in three case-insensitive keywords at the same time (*date*, *state*, and *shape*) for narrowing down certain datetime and state when/where the UFO sightings took place, and specific shape of the UFO objects at the time of sighting. The filtering keywords that we simulated were date = **1/1/2010**, state = **ca**, and shape = **triangle** (Fig. 1) and date = **1/1/2010**, state = **CA**, and shape = **Triangle** assuming that our users typed in a mixture of lowercase and uppercase keywords (Fig. 2).
 
 Brief animation effects will play briefly when users visit or reload our <a href="https://ats-tandjoeng7.github.io/UFOs/" target="_blank">UFO Finder webpage</a>.
 
@@ -127,13 +127,13 @@ Brief animation effects will play briefly when users visit or reload our <a href
 One drawback of our current webpage was the filtering features require a lot of typing, which could certainly trigger mistyping. Users may feel frustrated if their filtering keywords keep returning nothing. Auto-completion features and drop-down menus (e.g. country selection) might be one way to help users mitigate these hassles.
 
 #### Recommendations
-To improve our webpage beyond the four bullet points that have been detailed in [Deliverable 1](#deliverable-1), here are two recommendations that I would like to suggest.
+To improve our webpage beyond the four bullet points that have been detailed in [Deliverable 1](#deliverable-1), here are two development recommendations that I would like to suggest.
 
 1. Adding correction features for properly displaying special characters and escape characters under the **Comments** header. JavaScript `RegExp()` and `match()` methods might be the options for fixing such displaying limitations. Similarly, adding correction features for capitalizing the first letter of City names and both letters of State and Country names after users run their filtering preferences might also improve user experience. JavaScript `charAt()` and `substring()` methods might be helpful to accomplish these tricks.
 2. Clickable visual maps for filtering certain locations where UFO sightings took place, which let users visually spot the UFO sighting locations and filter certain location and information just by clicking or hovering over a location that users want to analyze.
 
 ## Summary
-All deliverables have been completed and summarized according to Module 12 assignment requirements, including some extra analyses, deployment and validation of some improvement features, testruns, and in-depth analysis results. I hope users will be able to experience the user-friendly features when using our <a href="https://ats-tandjoeng7.github.io/UFOs/" target="_blank">UFO Finder webpage</a> and leave the webpage with good impression.
+All deliverables have been completed and summarized according to Module 12 assignment requirements, including some extra analyses, deployment and validation of some improvement features, test runs, and in-depth analysis results. I hope users will be able to experience the user-friendly features when using our <a href="https://ats-tandjoeng7.github.io/UFOs/" target="_blank">UFO Finder webpage</a> and leave the webpage with good impression.
 
 ## References
 [HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML)\
