@@ -17,7 +17,7 @@ This project focused on the application of web designing software, such as HTML,
 - [References](#references)
 
 ## Overview of Project
-This project and Module 12 assignment focused on cultivating knowledge and skills of web designing and data analysis through some rigorous exercises for further understanding the concepts of integrating HyperText Markup Language (HTML), Cascading Style Sheet (CSS), and JavaScript programs for building a dynamic and interactive webpage with optimized content, functionality, usability, and user experience. We then applied our knowledge and core skills to deploy our webpage and perform in-depth analysis of UFO (Unidentified Flying Object) sighting databases by allowing users to easily filter a list of data by multiple criteria at the same time.
+This project and Module 12 assignment focused on cultivating knowledge and skills of web designing and data analysis through some rigorous exercises for further understanding the concepts of integrating HyperText Markup Language (HTML), Cascading Style Sheet (CSS), and JavaScript (JS) programs for building a dynamic and interactive webpage with optimized content, functionality, usability, and user experience. We then applied our knowledge and core skills to deploy our webpage and perform in-depth analysis of Unidentified Flying Object (UFO) sighting databases by allowing users to easily filter a list of data by multiple criteria at the same time.
 
 ### Resources
 - Source code: app.js, data.js, style.css, index.html
@@ -82,7 +82,6 @@ function updateFilters() {
     delete filters[filterId];
   }
   console.log(Object.keys(filters).length)
-//  console.log(filterId, filterVal, filters);
 
   // 6. Call function to apply all filters and rebuild the table
   filterTable();
@@ -127,7 +126,7 @@ We factored in several possible improvements and incorporated best practices in 
 Brief animation effects will play briefly when users visit or reload our <a href="https://ats-tandjoeng7.github.io/UFOs/" target="_blank">UFO Finder webpage</a>.
 
 #### Drawback
-One drawback of our current webpage was the filtering features require a lot of typing, which could certainly trigger mistyping. Users may feel frustrated if their filtering keywords keep returning nothing. Auto-completion features and drop-down menus (e.g. country selection) might be one way to help users mitigate these hassles.
+One drawback of our current webpage was the filtering features require a lot of typing, which could certainly trigger mistyping. Users may feel frustrated if their filtering keywords keep returning nothing. Autocomplete features and drop-down menus (e.g. country selection) might be one way to help users mitigate these hassles.
 
 #### Recommendations
 To improve our webpage beyond the four bullet points that have been detailed in [Deliverable 1](#deliverable-1), here are two development recommendations that I would like to suggest.
